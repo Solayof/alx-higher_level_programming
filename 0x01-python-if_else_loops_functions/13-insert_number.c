@@ -23,7 +23,7 @@ listint_t *insert_node(listint_t **head, int number)
 		curr = tmp;
 		tmp = tmp->next;
 	}
-	if (curr == NULL)
+	if (tmp == *head)
 	{
 		curr = tmp;
 		tmp = new;
