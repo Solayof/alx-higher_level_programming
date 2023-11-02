@@ -14,4 +14,4 @@ if __name__ == "__main__":
 
     x = int(argv[1])
     y = int(argv[3])
-    print("{:d} {:s} {:d} = {:d}".format(x, op, y, f[op](x, y)))
+    print("{:d} {:s} {:d} = {:d}".format(x, op, y, sign[op](x, y)))
