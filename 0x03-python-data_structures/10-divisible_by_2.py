@@ -4,7 +4,7 @@ def divisible_by_2(my_list=[]):
         val = []
         for i in my_list:
             if i % 2 is 0:
-                val.append(True)
+                val += [True]
             else:
-                val.append(False)
+                val += [False]
         return val
