@@ -1,6 +1,9 @@
 #include "lists.h"
 
 /**
+ * is_palindrome - check if a list is a palindrome
+ * @head: list head
+ * Return: 1 of it's apalindrome 0 otherwise.
  */
 
 int is_palindrome(listint_t **head)
@@ -30,7 +33,7 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 
-	for (i = 0; i <= (size/2); i++)
+	for (i = 0; i <= (size / 2); i++)
 	{
 		if (buff[i] != buff[size - i - 1])
 			return (0);
