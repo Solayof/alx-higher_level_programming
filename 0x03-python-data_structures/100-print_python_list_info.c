@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include<Python.h>
+#include <Python.h>
 
 /**
  * print_python_list_info - object info
@@ -9,7 +9,7 @@
 
 void print_python_list_info(PyObject *p)
 {
-	long int size, i;
+	Py_ssize_t size, i;
 	PyListObject *list;
 	PyObject *item;
 
