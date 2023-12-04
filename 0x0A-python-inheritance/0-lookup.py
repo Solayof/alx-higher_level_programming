@@ -6,6 +6,7 @@ this module contains method that return list of object's attributes and methods
 
 """
 
+
 def lookup(obj):
     """Return object attributes and method"""
     return dir(obj)
