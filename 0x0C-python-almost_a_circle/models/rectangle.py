@@ -90,10 +90,48 @@ class Rectanlge(Base):
     
     def display(self):
         """Display Rectangular # of height by width"""
+        for _ in range(self.y):
+            print("")
         for _ in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
         """redefine __str__ representation of the object"""
-        print(f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}")
-    
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
+        """updates Rectangle Class attributes"""
+        if args:
+            for k, v in enumerate(args):
+                if k == 0:
+                    self.id = v
+                if k == 1:
+                    self.width = v
+                if k == 2:
+                    self.height = v
+                if k == 3:
+                    self.x = v
+                if k == 4:
+                    self.y = v
+        else:
+            if "id" in kwargs:
+                self.id == kwargs["id"]
+            if "width" in kwargs:
+                self.width == kwargs["width"]
+            if "height" in kwargs:
+                self.height == kwargs["height"]
+            if "x" in kwargs:
+                self.x == kwargs["x"]
+            if "y" in kwargs:
+                self.y == kwargs["y"]
+
+        def to_dictionary(self):
+            """Retruns the dictionary representation"""
+            dic_ = {}
+            dic_["id"] = self.id
+            dic_["width"] = self.width
+            dic_["height"] = self.height
+            dic_["x"] = self.x
+            dic_["y"] = self.y
+            return dic_
