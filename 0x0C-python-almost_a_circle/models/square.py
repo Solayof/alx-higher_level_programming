@@ -22,7 +22,7 @@ class Square(Rectangle):
             y (int): the y coordinate
         Raises:
             TypeError: if either width, height, x, y, is/are not int
-            ValueError: if either width, height, x, y, is/are less than or equal to zero
+            ValueError: if either width, height, x, y, is/are <= 0
         """
 
         super().__init__(size, size, x, y, id)
@@ -31,7 +31,7 @@ class Square(Rectangle):
         def size(self):
             """Get the size of a Square class"""
             return self.height
-        
+
         @size.setter
         def size(self, val):
             self.width = val
@@ -39,7 +39,7 @@ class Square(Rectangle):
 
         def __str__(self):
             """define the string representation"""
-            return f"{self.__class__.__name__} ({self.id}) {self.x}/{self.y} - {self.size}"
+            return f"[square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
         def update(self, *args, **kwargs):
             """updates Rectangle Class attributes"""

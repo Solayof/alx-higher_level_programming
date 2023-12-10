@@ -66,26 +66,26 @@ class Base():
     def load_from_file(cls):
         """Returns list of instances"""
         filenamee = cls.__name__ + ".json"
-        l = []
+        lis = []
         try:
             with open(filenamee, "r") as f:
                 instances = cls.from_json_string(f.read())
             for i, dic in enumerate(instances):
-                l.append(cls.create(**instances[i]))
-        except:
+                lis.append(cls.create(**instances[i]))
+        except FileNotFoundError:
             pass
-        return l
+        return lis
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
         filename = cls.__name__ + ".csv"
         with open(filename, 'w', newline='') as f:
             writer = csv.writer(f)
-            for obj in list_objs:
+            for ob in list_objs:
                 if cls.__name__ == "Rectangle":
-                    writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+                    writer.writerow([ob.id, ob.width, ob.height, obj.x, ob.y])
                 if cls.__name__ == "Square":
-                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
+                    writer.writerow([ob.id, ob.size, ob.x, ob.y])
 
     @classmethod
     def load_from_file_csv(cls):
