@@ -3,10 +3,10 @@
 Rectanlge Class
 
 """
-from models.base import Base
+from base import Base
 
 
-class Rectanlge(Base):
+class Rectangle(Base):
     """
     declare  class Rectangle
     Class Attributes:
