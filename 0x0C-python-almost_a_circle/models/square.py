@@ -43,7 +43,7 @@ class Square(Rectangle):
 
         def update(self, *args, **kwargs):
             """updates Rectangle Class attributes"""
-        if args and len(args) != 0:
+        if args:
             for k, v in enumerate(args):
                 if k == 0:
                     self.id = v
