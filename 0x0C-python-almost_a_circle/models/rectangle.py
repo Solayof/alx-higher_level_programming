@@ -130,9 +130,9 @@ class Rectangle(Base):
     def to_dictionary(self):
          """Retruns the dictionary representation"""
          dic_ = {}
+         dic_["y"] = self.y
+         dic_["x"] = self.x
          dic_["id"] = self.id
          dic_["width"] = self.width
          dic_["height"] = self.height
-         dic_["x"] = self.x
-         dic_["y"] = self.y
          return dic_
