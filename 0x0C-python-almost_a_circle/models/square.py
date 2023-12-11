@@ -27,8 +27,7 @@ class Square(Rectangle):
 
         super().__init__(size, size, x, y, id)
         self.size = size
-
-        @property
+@property
         def size(self):
             """Get the size of a Square class"""
             return self.height
@@ -40,7 +39,7 @@ class Square(Rectangle):
 
         def __str__(self):
             """define the string representation"""
-            return f"[square] ({self.id}) {self.x}/{self.y} - {self.size}"
+            return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
         def update(self, *args, **kwargs):
             """updates Rectangle Class attributes"""
@@ -72,3 +71,5 @@ class Square(Rectangle):
             dic_["x"] = self.x
             dic_["y"] = self.y
             return dic_
+
+        
