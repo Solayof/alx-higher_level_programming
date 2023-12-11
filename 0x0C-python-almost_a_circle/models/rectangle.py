@@ -127,12 +127,12 @@ class Rectangle(Base):
             if "y" in kwargs:
                 self.y == kwargs["y"]
 
-        def to_dictionary(self):
-            """Retruns the dictionary representation"""
-            dic_ = {}
-            dic_["id"] = self.id
-            dic_["width"] = self.width
-            dic_["height"] = self.height
-            dic_["x"] = self.x
-            dic_["y"] = self.y
-            return dic_
+    def to_dictionary(self):
+         """Retruns the dictionary representation"""
+         dic_ = {}
+         dic_["id"] = self.id
+         dic_["width"] = self.width
+         dic_["height"] = self.height
+         dic_["x"] = self.x
+         dic_["y"] = self.y
+         return dic_
