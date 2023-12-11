@@ -43,25 +43,25 @@ class Square(Rectangle):
 
         def update(self, *args, **kwargs):
             """updates Rectangle Class attributes"""
-        if args:
-            for k, v in enumerate(args):
-                if k == 0:
-                    self.id = v
-                if k == 1:
-                    self.size = v
-                if k == 2:
-                    self.x = v
-                if k == 3:
-                    self.y = v
-        else:
-            if "id" in kwargs:
-                self.id = kwargs["id"]
-            if "size" in kwargs:
-                self.width = kwargs["size"]
-            if "x" in kwargs:
-                self.x = kwargs["x"]
-            if "y" in kwargs:
-                self.y = kwargs["y"]
+            if args:
+                for k, v in enumerate(args):
+                    if k == 0:
+                        self.id = v
+                    if k == 1:
+                        self.size = v
+                    if k == 2:
+                        self.x = v
+                    if k == 3:
+                        self.y = v
+            else:
+                if "id" in kwargs:
+                    self.id = kwargs["id"]
+                if "size" in kwargs:
+                    self.width = kwargs["size"]
+                if "x" in kwargs:
+                    self.x = kwargs["x"]
+                if "y" in kwargs:
+                    self.y = kwargs["y"]
 
         def to_dictionary(self):
             """Return dictionary representation"""
