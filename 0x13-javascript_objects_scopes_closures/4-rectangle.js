@@ -13,15 +13,15 @@ module.exports = class Rectangle {
       console.log('X'.repeat(this.width));
     }
   }
-	
-	rotate () {
-			const wdth = this.width;
-			this.width = this.height;
-			this.height = wdth;
-	}
-	
-	double () {
-			this.width = this.width * 2;
-			this.height = this.height * 2;
-	}
+
+  rotate () {
+    const wdth = this.width;
+    this.width = this.height;
+    this.height = wdth;
+  }
+
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
 };
