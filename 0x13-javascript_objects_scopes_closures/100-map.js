@@ -2,7 +2,7 @@
 
 const list = require('./100-data.js').list;
 
-const newList = list.map((x, index) => x * index);
+const newList = list.map((val, index) => val * index);
 
 console.log(list);
 console.log(newList);
