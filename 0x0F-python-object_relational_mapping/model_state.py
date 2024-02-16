@@ -2,7 +2,7 @@
 
 """State class that inherit from Base, an instance of declarative_base()
 """
-from sqlalchemy import Column, Integer, MeataData, String
+from sqlalchemy import Column, Integer, MetaData, String
 from sqlalchemy.ext.declarative import declarative_base
 
 
