@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-adds the State object “Louisiana” to the database
+update the State object where id=2 in the database
 """
 
 from sqlalchemy import create_engine

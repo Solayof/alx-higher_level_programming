@@ -23,9 +23,8 @@ if __name__ == '__main__':
     session = Session()
 
     new_state = State(name='California')
-    new_city = City(name='San Francisco', states=california)
-# alternative way to add city to state below
-#    new_state.cities.append(new_city)
+    new_city = City(name='San Francisco', states=new_state.name)
+    new_state.cities.append(new_city)
 
     session.add(new_state)
     session.add(new_city)
