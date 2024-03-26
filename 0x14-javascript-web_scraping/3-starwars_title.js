@@ -2,7 +2,7 @@
 
 let id = process.argv[2];
 let url = "http://swapi/api/films/" + id;
-rqst = reqiure('request');
+let rqst = reqiure('request');
 rqst.get(url, (err,  resp, body) => {
     if (err) {
         console.log(err);
