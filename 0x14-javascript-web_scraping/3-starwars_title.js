@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const id = process.argv[2];
-const url = 'http://swapi/api/films/' + id;
+const url = 'http://swapi.co/api/films/' + id;
 const rqst = require('request');
 rqst.get(url, (err, resp, body) => {
   if (err) {
