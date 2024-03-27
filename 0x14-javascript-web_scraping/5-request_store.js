@@ -10,7 +10,9 @@ request(url, function (err, response, body) {
     console.log(err);
   } else {
     fs.writeFile(filename, body, 'utf8', (werr) => {
-      console.log(werr);
+      if (werr) {
+        console.log(werr);
+      }
     });
   }
 });
